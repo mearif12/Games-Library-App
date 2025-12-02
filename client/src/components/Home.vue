@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ msg }}</h1>
-        <a href="https://games-library-app.onrender.com/game">Games Library</a>
+        <a href="http://localhost:5000/game">Games Library</a>
     </div>
 </template>
 <script>
