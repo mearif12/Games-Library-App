@@ -130,13 +130,13 @@ export default {
     },
     methods : {
         getGames(){
-            const path = "http://localhost:4500/games";
+            const path = "https://games-library-app.onrender.com/games";
             axios.get(path)
             .then((res)=> this.games = res.data.Games)
             .catch((error)=> console.log(error));
         },
         addGame(){
-            const path = "http://localhost:4500/games";
+            const path = "https://games-library-app.onrender.com/games";
             axios.post(path,this.nGame)
             .then((res)=>{
                 this.games.push(res.data.game);
@@ -151,7 +151,7 @@ export default {
             });
         },
         updateGame(){
-            const path = `http://localhost:4500/games/${this.selectedGame.id}`;
+            const path = `https://games-library-app.onrender.com/games/${this.selectedGame.id}`;
             axios.put(path,this.selectedGame)
             .then((res)=>{
                 this.getGames();
@@ -166,7 +166,7 @@ export default {
             });
         },
         popGame(gameId){
-            const path = `http://localhost:4500/games/${gameId}`;
+            const path = `https://games-library-app.onrender.com/games/${gameId}`;
             axios.delete(path)
             .then((res)=>{
                 this.getGames();
