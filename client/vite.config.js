@@ -14,6 +14,10 @@ export default defineConfig({
     host:'0.0.0.0',
     port: 5000
   },
+  // vite.config.js
+  build: {
+    outDir: 'build',  // Change this to 'dist' or 'build' based on Render's expectations
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
