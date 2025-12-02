@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ msg }}</h1>
-        <a href="http://localhost:5000/game">Games Library</a>
+        <a href="https://games-library-app.onrender.com/game">Games Library</a>
     </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ export default {
    },
    methods:{
      getRes(){
-        const path = "http://localhost:4500";
+        const path = "https://games-library-app.onrender.com";
         axios.get(path)
         .then((res)=> this.msg = res.data)
         .catch((error)=> console.log(error));
